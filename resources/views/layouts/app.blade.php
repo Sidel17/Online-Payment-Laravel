@@ -59,8 +59,11 @@
 								<img src="{{ asset('img/setting.png') }}" width="26px" heigth="26px" >
 							</a>
 						</li>
-						<li>
-							<a href="/login">Logout</a>
+						<li role="presentation">
+							<form action="/logout" method="POST" id="logout-form">
+								{{ csrf_field() }}
+								<a href="#" onclick="document.getElementById('logout-form').submit()">Logout</a>
+							</form>
 						</li>
 					</nav>
 				</div>
